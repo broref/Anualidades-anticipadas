@@ -5,7 +5,7 @@ En este repositorio se sube la tarea sobre anualidades vencidas
 
 Con el siguiente codigo, usted puede cargar las funciones para los distintos calculos de anualidad vencida en su workspace de posit cloud
 ```
-source("https://raw.githubusercontent.com/broref/Tarea-funciones-de-anualidades-vencidas/refs/heads/main/Anualidades%20vencidas.R")
+source("https://raw.githubusercontent.com/broref/Anualidades-anticipadas/refs/heads/main/Funciones%20anualidades%20anticipadas.R")
 ```
 
 A continuacion se dan los ejemplos en los cuales estan basados los datos para la realizacion de los calculos
@@ -13,12 +13,11 @@ A continuacion se dan los ejemplos en los cuales estan basados los datos para la
 # Anualidad vencida
 
 ### Formula
-$VF = A*((1+r)^(t)-1)/r$
+$VF = (1+r)*A*((1+r)^t-1)/r$
 
-Para ejemplificar la formula de anualidades vencidas se tomara uno de los ejercicios vistos en clase.
+Para ejemplificar la formula de anualidades vencidas se tomara uno de los ejercicios del libro de Matematicas financieras de Hector Manuel Vidaurri Aguirre.
 ```
-Un inversionista realiza un pago mensual de $1200 al final de cada mes durante 5 años en una anualidad vencida que paga una
-tasa de interes del 6% anual, compuesta mensualmente ¿Cual el valor futuro de esa inversion?
+Al inicio de cada mes, Francisco deposita $5000 en una cuenta de inversion. Si la tasa de interes es del 1% mensual capitalizable cada mes ¿Cuanto tendra al cabo de 3 años?
 ```
 ### Significado de los valores
 
@@ -29,13 +28,13 @@ $VF$ = Valor final
 
 Se toman los valores y se hacen las respectivas conversiones para realizar los calculos y saber el valor futuro de la inversion
 ```
-$A$ = $1,200.00
-$t$ = 5*12 = 60
-$r$ = 6%/12 = 0.06/12 = 0.005
+$A$ = $5000
+$t$ = 3*12 = 36
+$r$ = 1% = 0.01
 ```
-Utilizando la formula de anualidades vencidas se tiene:
+Utilizando el resultado proporcionado en el libro se tiene que el valor de esa inversion a 3 años seria un total de:
 
-$VF$ = 83,724.036611836
+$VF$ = $217,538.24
 
 Comprobamos esto con las formulas calculadas con las funciones y como resultado se obtiene:
 
