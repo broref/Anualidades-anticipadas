@@ -22,8 +22,11 @@ Al inicio de cada mes, Francisco deposita $5000 en una cuenta de inversion. Si l
 ### Significado de los valores
 
 $A$ = Anualidad
+
 $t$ = Tiempo del periodo
+
 $r$ = Tasa de interes
+
 $VF$ = Valor final
 
 Se toman los valores y se hacen las respectivas conversiones para realizar los calculos y saber el valor futuro de la inversion
