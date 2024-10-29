@@ -110,7 +110,7 @@ AN = ValorAV(VA = 171628.504089402,r = 0.16/12,t = 48)
 ```
 ##### Calculo de tiempo/numero de pagos
 ```
-> P = ValorTV(VA = 171628.504089402,A = 4800,r = 0.16/12)
+P = ValorTV(VA = 171628.504089402,A = 4800,r = 0.16/12)
 ```
 ##### Calculo de tasa de interes
 ```
