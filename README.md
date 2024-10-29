@@ -1,9 +1,9 @@
 # Anualidades-anticipadas
 
-# Tarea-funciones-de-anualidades-vencidas
-En este repositorio se sube la tarea sobre anualidades vencidas
+# Tarea-funciones-de-anualidades-anticipadas
+En este repositorio se sube la tarea sobre anualidades anticipadas
 
-Con el siguiente codigo, usted puede cargar las funciones para los distintos calculos de anualidad vencida en su workspace de posit cloud
+Con el siguiente codigo, usted puede cargar las funciones para los distintos calculos de anualidad anticipada en su workspace de posit cloud
 ```
 source("https://raw.githubusercontent.com/broref/Anualidades-anticipadas/refs/heads/main/Funciones%20anualidades%20anticipadas.R")
 ```
@@ -15,7 +15,7 @@ A continuacion se dan los ejemplos en los cuales estan basados los datos para la
 ### Formula
 $VF = (1+r)*A*((1+r)^t-1)/r$
 
-Para ejemplificar la formula de anualidades vencidas se tomara uno de los ejercicios del libro de Matematicas financieras de Hector Manuel Vidaurri Aguirre.
+Para ejemplificar la formula de anualidades anticipadas se tomara uno de los ejercicios del libro de Matematicas financieras de Hector Manuel Vidaurri Aguirre pagina 317.
 ```
 Al inicio de cada mes, Francisco deposita $5000 en una cuenta de inversion. Si la tasa de interes es del 1% mensual capitalizable cada mes ¿Cuanto tendra al cabo de 3 años?
 ```
@@ -38,39 +38,40 @@ $VF$ = $217,538.24
 
 Comprobamos esto con las formulas calculadas con las funciones y como resultado se obtiene:
 
-$VF$ = 83,724.0366118338
+$VF$ = $217,538.235713748
 
-Nos daremos cuenta que se obtuvo un resultado muy parecido, esto es causado por la cantidad de decimales tomadas en uno y otro calculo del problema
+Nos daremos cuenta que se obtuvo un resultado muy parecido, esto es causado debido a que se toma la cifra en su forma mas pura, pero si nos damos cuenta el resultado solo esta resdondeado para una mayor simplificacion.
 
-### Para acceder a las funciones para calcular anualidad vencida y tener una mayor comodidad se tienen los siguientes comandos
+Se utilizara el valor calculado con las funciones respecto al resultado obtenido para una mayor precision.
+
+### Para acceder a las funciones para calcular anualidad anticipada y tener una mayor comodidad se tienen los siguientes comandos
 
 ##### Calculo de valor futuro
 ```
-VF=ValorFuturo(A=1200,r=0.005,t=60)
+VF = ValorVF(A = 5000,r = 0.01,t = 36)
 ```
 ##### Calculo de anualidad
 ```
-a=Anualidad(VF=83724.0366118338,r=0.005,t=60)
+a = ValorA(VF = 217538.235713748,r = 0.01,t = 36)
 ```
 ##### Calculo de tiempo/numero de pagos
 ```
-T=N_pagos(A=1200,VF=83724.0366118338,r=0.005)
+T = ValorT(VF = 217538.235713748,A = 5000,r = 0.01)
 ```
 ##### Calculo de tasa de interes
 ```
-r=Tasa(VF=83724.0366118338,A=1200,t=60)
+R = ValorR(VF = 217538.235713748,A = 5000,t = 36)
 ```
 
 
 # Valor actual
 
 ### Formula
-$VA = A*(1-(1+r)^(-t))/r$
+$VA = (1+r)*A*(1-(1+r)^(-t))/r$
 
-Para la formula en la que se saca el valor actual se utiliza el siguiente ejmplo del libro de Hector Manuel Vidaurri Aguirre.
+Para ejemplificar la formula de anualidades anticipadas con valor actual(valor presente o sinonimos) se tomara uno de los ejercicios del libro de Matematicas financieras de Hector Manuel Vidaurri Aguirre pagina 318.
 ```
-Un inversionista realiza un pago de $10,000 en una cuenta al final de cada trimestre durante 4 años si la tasa de interes es
-del 14% anual, compuesta trimestralmente ¿Cuál es el valor actual de la inversion?
+Un automovil se puede comprar a credito mediante 48 abonos mensuales anticipados de $4,800. Si la tasa de interes es del 16% capitalizable cada mes ¿Cual es el valor de contado del automovil?
 ```
 ### Significado de los valores
 
@@ -81,35 +82,37 @@ $VA$ = Valor actual
 
 Se toman los valores y se hacen las respectivas conversiones para realizar los calculos y saber el valor actual de la inversion
 ```
-$A$ = 10,000
-$t$ = 4*4 = 16
-$r$ = 14%/4 = 0.14/4 = 0.0035
+$A$ = $4,800
+$t$ = 48
+$r$ = 16%/12 = 0.16/12 = 0.013333333
 ```
-Utilizando la formula para saber el Valor actual se tiene:
+Utilizando el resultado proporcionado en el libro se tiene que el valor de esa inversion a 3 años seria un total de:
 
-$VA$ = 120,941.16808149
+$VA$ = $171,628.50
 
 Comprobamos esto con las formulas calculadas con las funciones y como resultado se obtiene:
 
-$VA$ = 120,941.168081489
+$VA$ = $171,628.504089402
 
-Nos daremos cuenta que se obtuvo un resultado muy parecido, esto es causado por la cantidad de decimales tomadas en uno y otro calculo del problema
+Nos daremos cuenta que se obtuvo un resultado muy parecido, esto es causado debido a que se toma la cifra en su forma mas pura, pero si nos damos cuenta el resultado solo esta resdondeado para una mayor simplificacion.
+
+Se utilizara el valor calculado con las funciones respecto al resultado obtenido para una mayor precision.
 
 ### Para acceder a las funciones para calcular valor actual y tener una mayor comodidad se tienen los siguientes comandos
 
 ##### Calculo de valor actual
 ```
-VA=Valor_actual(A=10000,r=0.035,t=16)
+ VA = ValorVA(A = 4800,r = 0.16/12,t = 48)
 ```
 ##### Calculo de anualidad
 ```
-An=Anual(VA=120941.16808149,r=0.035,t=16)
+AN = ValorAV(VA = 171628.504089402,r = 0.16/12,t = 48)
 ```
 ##### Calculo de tiempo/numero de pagos
 ```
-Pe=Num_p(VA=120941.16808149,A=10000,r=0.035)
+> P = ValorTV(VA = 171628.504089402,A = 4800,r = 0.16/12)
 ```
 ##### Calculo de tasa de interes
 ```
-rv=Tasa_v(VA=120941.16808149,A=10000,t=16)
+Rv = ValorRV(VA = 171628.504089402,A = 4800,t = 48)
 ```
