@@ -10,10 +10,10 @@ source("https://raw.githubusercontent.com/broref/Anualidades-anticipadas/refs/he
 
 A continuacion se dan los ejemplos en los cuales estan basados los datos para la realizacion de los calculos
 
-# Anualidad vencida
+# Anualidad anticipada
 
 ### Formula
-$VF$ = $((1+r)*A*((1+r)^t-1)/r)$
+$VF$ = (1+r)*A*((1+r)^t-1)&frasl;/r
 
 Para ejemplificar la formula de anualidades anticipadas se tomara uno de los ejercicios del libro de Matematicas financieras de Hector Manuel Vidaurri Aguirre pagina 317.
 ```
@@ -28,9 +28,9 @@ $VF$ = Valor final
 
 Se toman los valores y se hacen las respectivas conversiones para realizar los calculos y saber el valor futuro de la inversion
 ```
-$A$ = $5000
-$t$ = 3*12 = 36
-$r$ = 1% = 0.01
+A = $5000
+t = 3*12 = 36
+r = 1% = 0.01
 ```
 Utilizando el resultado proporcionado en el libro se tiene que el valor de esa inversion a 3 años seria un total de:
 
@@ -67,7 +67,7 @@ R = ValorR(VF = 217538.235713748,A = 5000,t = 36)
 # Valor actual
 
 ### Formula
-$VA = (1+r)*A*(1-(1+r)^(-t))/r$
+$VA$ = (1+r)*A*(1-(1+r)^(-t))/r
 
 Para ejemplificar la formula de anualidades anticipadas con valor actual(valor presente o sinonimos) se tomara uno de los ejercicios del libro de Matematicas financieras de Hector Manuel Vidaurri Aguirre pagina 318.
 ```
@@ -82,9 +82,9 @@ $VA$ = Valor actual
 
 Se toman los valores y se hacen las respectivas conversiones para realizar los calculos y saber el valor actual de la inversion
 ```
-$A$ = $4,800
-$t$ = 48
-$r$ = 16%/12 = 0.16/12 = 0.013333333
+A = $4,800
+t = 48
+r = 16%/12 = 0.16/12 = 0.013333333
 ```
 Utilizando el resultado proporcionado en el libro se tiene que el valor de esa inversion a 3 años seria un total de:
 
