@@ -13,7 +13,7 @@ A continuacion se dan los ejemplos en los cuales estan basados los datos para la
 # Anualidad vencida
 
 ### Formula
-$VF = (1+r)*A*((1+r)^t-1)/r$
+$VF$ = $(1+r)*A*((1+r)^t-1)/r$
 
 Para ejemplificar la formula de anualidades anticipadas se tomara uno de los ejercicios del libro de Matematicas financieras de Hector Manuel Vidaurri Aguirre pagina 317.
 ```
