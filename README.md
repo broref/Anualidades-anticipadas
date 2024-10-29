@@ -79,8 +79,11 @@ Un automovil se puede comprar a credito mediante 48 abonos mensuales anticipados
 ### Significado de los valores
 
 $A$ = Anualidad
+
 $t$ = Tiempo del periodo
+
 $r$ = Tasa de interes
+
 $VA$ = Valor actual
 
 Se toman los valores y se hacen las respectivas conversiones para realizar los calculos y saber el valor actual de la inversion
