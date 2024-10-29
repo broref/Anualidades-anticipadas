@@ -86,13 +86,13 @@ $r$ = Tasa de interes
 
 $VA$ = Valor actual
 
-Se toman los valores y se hacen las respectivas conversiones para realizar los calculos y saber el valor actual de la inversion
+Se toman los valores y se hacen las respectivas conversiones para realizar los calculos y saber el valor actual del automovil
 ```
 A = $4,800
 t = 48
 r = 16%/12 = 0.16/12 = 0.013333333
 ```
-Utilizando el resultado proporcionado en el libro se tiene que el valor de esa inversion a 3 años seria un total de:
+Utilizando el resultado proporcionado en el libro se tiene que el valor de ese automovil sera de:
 
 $VA$ = $171,628.50
 
